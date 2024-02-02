@@ -1,0 +1,113 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+	 <TargetFramework>net6.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TestTetris\**" />
+    <Compile Remove="Tetris\**" />
+    <Compile Remove="VM\**" />
+    <EmbeddedResource Remove="TestTetris\**" />
+    <EmbeddedResource Remove="Tetris\**" />
+    <EmbeddedResource Remove="VM\**" />
+    <None Remove="TestTetris\**" />
+    <None Remove="Tetris\**" />
+    <None Remove="VM\**" />
+    <Page Remove="TestTetris\**" />
+    <Page Remove="Tetris\**" />
+    <Page Remove="VM\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Background.png" />
+    <None Remove="Images\Block-Empty.png" />
+    <None Remove="Images\Block-I.png" />
+    <None Remove="Images\Block-J.png" />
+    <None Remove="Images\Block-L.png" />
+    <None Remove="Images\Block-O.png" />
+    <None Remove="Images\Block-S.png" />
+    <None Remove="Images\Block-T.png" />
+    <None Remove="Images\Block-Z.png" />
+    <None Remove="Images\C.png" />
+    <None Remove="Images\D.png" />
+    <None Remove="Images\Down.png" />
+    <None Remove="Images\Icon.ico" />
+    <None Remove="Images\IconApp.png" />
+    <None Remove="Images\Left.png" />
+    <None Remove="Images\Right.png" />
+    <None Remove="Images\Start.png" />
+    <None Remove="Images\TileBlue.png" />
+    <None Remove="Images\TileCyan.png" />
+    <None Remove="Images\TileEmpty.png" />
+    <None Remove="Images\TileGreen.png" />
+    <None Remove="Images\TileOrange.png" />
+    <None Remove="Images\TilePurple.png" />
+    <None Remove="Images\TileRed.png" />
+    <None Remove="Images\TileYellow.png" />
+    <None Remove="Images\Up.png" />
+    <None Remove="Images\Z.png" />
+    <None Remove="Sounds\BackgroundMusic.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Background.png" />
+    <Resource Include="Images\Block-Empty.png" />
+    <Resource Include="Images\Block-I.png" />
+    <Resource Include="Images\Block-J.png" />
+    <Resource Include="Images\Block-L.png" />
+    <Resource Include="Images\Block-O.png" />
+    <Resource Include="Images\Block-S.png" />
+    <Resource Include="Images\Block-T.png" />
+    <Resource Include="Images\Block-Z.png" />
+    <Resource Include="Images\C.png" />
+    <Resource Include="Images\D.png" />
+    <Resource Include="Images\Down.png" />
+    <Resource Include="Images\Icon.ico" />
+    <Resource Include="Images\Left.png" />
+    <Resource Include="Images\Right.png" />
+    <Resource Include="Images\Start.png" />
+    <Resource Include="Images\TileBlue.png" />
+    <Resource Include="Images\TileCyan.png" />
+    <Resource Include="Images\TileEmpty.png" />
+    <Resource Include="Images\TileGreen.png" />
+    <Resource Include="Images\TileOrange.png" />
+    <Resource Include="Images\TilePurple.png" />
+    <Resource Include="Images\TileRed.png" />
+    <Resource Include="Images\TileYellow.png" />
+    <Resource Include="Images\Up.png" />
+    <Resource Include="Images\Z.png" />
+    <EmbeddedResource Include="Sounds\BackgroundMusic.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+	 <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
